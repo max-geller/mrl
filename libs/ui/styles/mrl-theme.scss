@@ -100,9 +100,9 @@ $mat-light-theme-background: (background: $light-background,
 // Sutro Theme Configuration
 
 body {
-  --primary-color: #13256c;
+  --primary-color: #05491f;
   --primary-lighter-color: #b8bed3;
-  --primary-darker-color: #0b164f;
+  --primary-darker-color: #043517;
 //  --primary-color: #be7310;
 //  --primary-lighter-color: #b8bed3;
 //  --primary-darker-color: #885411;
@@ -111,10 +111,10 @@ body {
   --text-primary-darker-color: $light-primary-text;
 }
 
-$mat-primary: (main: #13256c,
+$mat-primary: (main: #05491f,
   lighter: #b8bed3,
-  darker: #0b164f,
-  200: #13256c, // For slide toggle,
+  darker: #043517,
+  200: #05491f, // For slide toggle,
   contrast : (main: $light-primary-text,
     lighter: $dark-primary-text,
     darker: $light-primary-text,
