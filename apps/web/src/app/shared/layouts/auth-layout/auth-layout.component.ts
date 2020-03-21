@@ -4,7 +4,6 @@ import { AuthService } from '../../../core/auth/auth.service';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSort, MatDialog } from '@angular/material';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { NewTaskComponent } from '../../../modules/tasks/modals/new-task/new-task.component';
 
 @Component({
   selector: 'mrl-auth-layout',

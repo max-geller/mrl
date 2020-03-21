@@ -23,7 +23,7 @@ const routes: Routes = [
     path: 'auth',
     component: AuthLayoutComponent,
     loadChildren: './auth/auth.module#AuthModule',
-    canActivate: [ AuthGuard ]
+    canActivate: [ ]
   },
   {
     path: '**',

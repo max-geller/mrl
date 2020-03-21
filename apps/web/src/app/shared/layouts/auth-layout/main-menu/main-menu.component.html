@@ -1,0 +1,50 @@
+<div>
+  <a mat-button [matMenuTriggerFor]="racing">MARBLE RACING</a>
+  <a mat-button [matMenuTriggerFor]="handicapping">HANDICAPPING</a>
+  <a mat-button [matMenuTriggerFor]="promotions">PROMOTIONS</a>
+  <a mat-button [matMenuTriggerFor]="support">SUPPORT</a>
+</div>
+
+<mat-menu #racing="matMenu">
+  <button mat-menu-item>
+    <mat-icon>trending_up</mat-icon>
+    <span>Popular</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>update</mat-icon>
+    <span>Recent</span>
+  </button>
+</mat-menu>
+
+<mat-menu #handicapping="matMenu">
+  <button mat-menu-item>
+    <mat-icon>trending_up</mat-icon>
+    <span>Popular</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>update</mat-icon>
+    <span>Recent</span>
+  </button>
+</mat-menu>
+
+<mat-menu #promotions="matMenu">
+  <button mat-menu-item>
+    <mat-icon>trending_up</mat-icon>
+    <span>Popular</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>update</mat-icon>
+    <span>Recent</span>
+  </button>
+</mat-menu>
+
+<mat-menu #support="matMenu">
+  <button mat-menu-item>
+    <mat-icon>trending_up</mat-icon>
+    <span>Popular</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>update</mat-icon>
+    <span>Recent</span>
+  </button>
+</mat-menu>

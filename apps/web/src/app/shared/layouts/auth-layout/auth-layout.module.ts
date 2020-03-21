@@ -4,12 +4,8 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared.module';
 
 import { AuthLayoutComponent } from './auth-layout.component';
-
 import { IconMenuComponent } from './icon-menu/icon-menu.component';
-import { HeaderComponent } from './header/header.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
-import { BreadcrumbComponent } from './header/breadcrumb/breadcrumb.component';
-import { TitleBlockComponent } from './header/title-block/title-block.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 
 @NgModule({
@@ -20,11 +16,8 @@ import { TitleBlockComponent } from './header/title-block/title-block.component'
   ],
   declarations: [
     AuthLayoutComponent,
-    HeaderComponent,
     IconMenuComponent,
-    SideNavComponent,
-    TitleBlockComponent,
-    BreadcrumbComponent
+    MainMenuComponent
   ]
 })
 export class AuthLayoutModule { }
