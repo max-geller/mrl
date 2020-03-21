@@ -21,8 +21,15 @@
             "polyfills": "apps/web/src/polyfills.ts",
             "tsConfig": "apps/web/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/web/src/favicon.ico", "apps/web/src/assets"],
-            "styles": ["apps/web/src/styles.scss"],
+            "assets": [
+              "apps/web/src/favicon.ico",
+              "apps/web/src/assets",
+              "apps/web/src/assets/_redirects"
+            ],
+            "styles": [
+              "libs/ui/styles/mrl-theme.scss",
+              "apps/web/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {

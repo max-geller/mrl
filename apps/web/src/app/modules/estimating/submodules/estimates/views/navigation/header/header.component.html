@@ -1,0 +1,39 @@
+<mat-toolbar>
+  <button mat-button [matMenuTriggerFor]="file">File</button>
+  <mat-menu #file="matMenu">
+    <button mat-menu-item class="pointer"><i class="far fa-plus"></i>&nbsp; &nbsp; New Estimate</button>
+    <button mat-menu-item class="pointer"><i class="far fa-folder-open"></i>&nbsp; &nbsp; Open Estimate</button>
+    <button mat-menu-item class="pointer"><i class="far fa-save"></i>&nbsp; &nbsp; Save Estimate</button>
+    <button mat-menu-item class="pointer"><i class="far fa-copy"></i>&nbsp; &nbsp; Save As</button>
+    <button mat-menu-item [routerLink]="['/auth/modules/estimating']"><i class="far fa-window-close"></i>&nbsp; &nbsp; Close</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="edit">Edit</button>
+  <mat-menu #edit="matMenu">
+    <button mat-menu-item class="pointer"><i class="far fa-undo"></i>&nbsp; &nbsp; Undo</button>
+    <button mat-menu-item class="pointer"><i class="far fa-redo"></i>&nbsp; &nbsp; Redo</button>
+    <button mat-menu-item class="pointer"><i class="far fa-paste"></i>&nbsp; &nbsp; Paste</button>
+    <button mat-menu-item class="pointer"><i class="far fa-trash"></i>&nbsp; &nbsp; Delete</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item class="pointer"><i class="far fa-repeat-alt"></i>&nbsp; &nbsp; Substitute Items</button>
+    <button mat-menu-item class="pointer"><i class="far fa-random"></i>&nbsp; &nbsp; Substitute Assemblies</button>
+
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="settings">Settings</button>
+  <mat-menu #settings="matMenu">
+    <button mat-menu-item class="pointer"><i class="far fa-file-chart-line"></i>&nbsp; &nbsp; Report Styles</button>
+    <button mat-menu-item class="pointer"><i class="far fa-tv-alt"></i>&nbsp; &nbsp; Screen Styles</button>
+    <button mat-menu-item class="pointer"><i class="far fa-database"></i>&nbsp; &nbsp; Manage Database</button>
+    <button mat-menu-item class="pointer"><i class="far fa-dollar-sign"></i>&nbsp; &nbsp; Pricing Update</button>
+    <button mat-menu-item class="pointer"><i class="far fa-cogs"></i>&nbsp; &nbsp; Settings</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="help">Help</button>
+  <mat-menu #help="matMenu">
+    <button mat-menu-item class="pointer" routerLink="/auth/modules/estimating/help"><i class="far fa-books"></i>&nbsp; &nbsp; Documentation</button>
+    <button mat-menu-item class="pointer"><i class="fab fa-slack-hash"></i>&nbsp; &nbsp; Slack Channel</button>
+    <button mat-menu-item class="pointer"><i class="far fa-comments"></i>&nbsp; &nbsp; Online Support</button>
+    <button mat-menu-item class="pointer"><i class="far fa-bug"></i>&nbsp; &nbsp; Report a Bug</button>
+  </mat-menu>
+</mat-toolbar>

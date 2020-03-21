@@ -1,0 +1,94 @@
+<div class="context-header" fxFill fxLayout="row wrap" fxLayoutAlign="space-between end">
+  <div class="header-title" fxLayout="column" fxFlex="20">
+      <h3>TAKEOFF</h3>
+  </div>
+
+</div>
+<mat-divider></mat-divider>
+
+<mat-sidenav-container class="takeoff-container" style="height: 100vh;">
+  <mat-sidenav mode="side" opened>
+    <div class="database-container">
+
+      <mat-card>
+
+        <mat-card-content>
+          <mat-form-field appearance="outline">
+            <mat-label>System</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let system of systems" [value]="system.value">
+                {{system.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Takeoff Source</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let database of database" [value]="database.value">
+                {{database.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-content>
+
+      </mat-card>
+
+      <mat-card>
+        <mat-card-content>
+          <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+          </mat-form-field>
+
+          <mat-table  [dataSource]="activeEstimates" matSort class="animate">
+
+            <ng-container matColumnDef="project">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Project </mat-header-cell>
+              <mat-cell *matCellDef="let data"> {{ data.project }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="designPhase">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Design Phase </mat-header-cell>
+              <mat-cell *matCellDef="let data"> {{ data.designPhase }} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="designProgress">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Design Progress </mat-header-cell>
+              <mat-cell *matCellDef="let data"> {{ data.designProgress }} </mat-cell>
+            </ng-container>
+
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+          </mat-table>
+
+          <mat-paginator [length]="1" [pageSize]="1"></mat-paginator>
+
+        </mat-card-content>
+
+      </mat-card>
+
+  </div>
+  </mat-sidenav>
+
+
+
+  <mat-sidenav-content>
+
+        <p>more dummy text</p>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>title</mat-card-title>
+          <mat-card-subtitle>subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+        This is some dummy text
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Ok</button>
+        </mat-card-actions>
+      </mat-card>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

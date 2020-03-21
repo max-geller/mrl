@@ -1,0 +1,18 @@
+<mat-card class="active-estimates" fxLayout="column" >
+  <mat-card-header>
+    <mat-card-title>Active Estimates</mat-card-title>
+    <mat-card-subtitle>subtitle</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <div class="estimate-actions">
+      <button mat-raised-button color="primary" type="submit" routerLink="/auth/modules/estimating/new-estimate" >New Estimate</button>
+      <button mat-raised-button color="accent" type="submit" routerLink="/auth/modules/estimating/estimates/estimate-info" >Edit Estimate</button>
+    </div>
+  </mat-card-actions>
+  <mat-card-content>
+    <div class="estimate-table">
+      <app-estimate-schedule></app-estimate-schedule>
+    </div>
+  </mat-card-content>
+
+</mat-card>

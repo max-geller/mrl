@@ -1,0 +1,79 @@
+
+
+  <h2>DEVELOP WITH AUTODESK FORGE:</h2>
+<h4>MEP Systems Design Automation API for Revit</h4>
+<p>
+Create custom Revit family content <br>
+Automate model creation<br>
+Explore and analyze model data<br>
+Extract and produce automated reports<br>
+Modify existing models to maintain company standards<br>
+Automatically create documentation
+</p>
+
+<h4>MEP Design Automation API for AutoCAD</h4>
+Creating new DWG files<br>
+Querying for information in existing DWG files<br>
+Purging drawings and saving them to other DWF file formats<br>
+Plotting DWG files to DWF and PDF<br>
+Translating text from one language to another<br>
+
+
+Recent Use-Cases:<br>
+<ul>
+  <li>Generator Sizing</li>
+  <li>Facility Load Summary</li>
+  <li>Feeder Size Automation</li>
+  <li>Equipment Size Automation</li>
+  <li>Automated Placement/Sizing of Disconnects, Pullboxes</li>
+  <li>MEP Systems Report</li>
+</ul>
+<div class="projects-table">
+    <mat-card>
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      <mat-table  [dataSource]="projects" matSort class="animate">
+        <ng-container matColumnDef="projectName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.projectName }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="createdDate">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Date Created </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.createdDate }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="lastModified">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Last Modified </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.lastModified }} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="isActive">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Active </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.isActive }} </mat-cell>
+        </ng-container>
+
+
+
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>
+            <button mat-icon-button color="primary" >
+              <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+            </button>
+          </mat-header-cell>
+
+          <mat-cell *matCellDef="let row; let i=index;">
+            <button mat-icon-button color="accent" >
+              <mat-icon aria-label="Edit">edit</mat-icon>
+            </button>
+
+          </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+      </mat-table>
+
+      <mat-paginator [length]="1" [pageSize]="1">
+      </mat-paginator>
+    </mat-card>
+    </div>

@@ -1,0 +1,92 @@
+<div class="main-container" fxFill fxLayout="row wrap" fxLayoutGap="15px grid" fxLayoutAlign="start-center" fxFlex>
+
+  <div class="chart-container" fxLayout="column">
+    <mat-card>
+
+      <mat-card-content>
+        <div class="selection-header" fxFill fxLayout="row wrap" fxLayoutAlign="start-center">
+          <mat-form-field>
+
+              <select matNativeControl>
+                  <optgroup label="Electrical & Technology">
+                  <option value="volvo">IBEW - Inside Wiremen</option>
+                  <option value="volvo">IBEW - Sound & Communications</option>
+                  </optgroup>
+                  <optgroup label="Mechanical & Plumbing">
+                      <option value="volvo">Sheetmetal Workers</option>
+                      <option value="saab">Plumbing</option>
+                      <option value="saab">Fire Protection</option>
+                  </optgroup>
+                  <optgroup label="Common">
+                  <option value="mercedes">Welders Union</option>
+                  <option value="audi">Carpenters</option>
+                  <option value="hyatt">Steelworkers</option>
+                  <option value="tx">Laborers</option>
+                  </optgroup>
+              </select>
+          </mat-form-field>
+
+          <mat-form-field>
+              <mat-label>Location</mat-label>
+              <select matNativeControl>
+              <optgroup label="Estimates">
+                  <option value="volvo">IBEW #6 - San Francisco</option>
+                  <option value="saab">IBEW #617 - San Mateo</option>
+              </optgroup>
+              </select>
+          </mat-form-field>
+        </div>
+
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+
+  <div class="chart-container" fxLayout="column">
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>title</mat-card-title>
+        <mat-card-subtitle>subtitle</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <google-chart #chart
+        [title]="linetitle"
+        [type]="linetype"
+        [data]="linedata"
+        [columnNames]="linecolumnNames"
+        [options]="lineoptions"
+        [width]="linewidth"
+        [height]="lineheight">
+    </google-chart>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Ok</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <div class="chart-container" fxLayout="column">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>title</mat-card-title>
+        <mat-card-subtitle>subtitle</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <google-chart #chart
+        [title]="pietitle"
+        [type]="pietype"
+        [data]="piedata"
+        [columnNames]="piecolumnNames"
+        [options]="pieoptions"
+        [width]="piewidth"
+        [height]="pieheight">
+    </google-chart>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Ok</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
