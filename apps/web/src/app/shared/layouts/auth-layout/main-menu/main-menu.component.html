@@ -1,40 +1,28 @@
 <div>
-  <a mat-button [matMenuTriggerFor]="racing">MARBLE RACING</a>
-  <a mat-button [matMenuTriggerFor]="handicapping">HANDICAPPING</a>
-  <a mat-button [matMenuTriggerFor]="promotions">PROMOTIONS</a>
+  <a mat-button [matMenuTriggerFor]="racing">RACING</a>
+  <a mat-button [matMenuTriggerFor]="leagues">LEAGUES</a>
   <a mat-button [matMenuTriggerFor]="support">SUPPORT</a>
 </div>
 
 <mat-menu #racing="matMenu">
   <button mat-menu-item>
     <mat-icon>trending_up</mat-icon>
-    <span>Popular</span>
+    <span>RACE SCHEDULE</span>
   </button>
   <button mat-menu-item>
     <mat-icon>update</mat-icon>
-    <span>Recent</span>
+    <span>RESULTS</span>
   </button>
 </mat-menu>
 
-<mat-menu #handicapping="matMenu">
+<mat-menu #leagues="matMenu">
   <button mat-menu-item>
     <mat-icon>trending_up</mat-icon>
-    <span>Popular</span>
+    <span>MIDTOWN MARBLES</span>
   </button>
   <button mat-menu-item>
     <mat-icon>update</mat-icon>
-    <span>Recent</span>
-  </button>
-</mat-menu>
-
-<mat-menu #promotions="matMenu">
-  <button mat-menu-item>
-    <mat-icon>trending_up</mat-icon>
-    <span>Popular</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>update</mat-icon>
-    <span>Recent</span>
+    <span>JELLE'S MARBLE RUNS</span>
   </button>
 </mat-menu>
 
